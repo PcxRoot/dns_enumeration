@@ -15,5 +15,5 @@ pip install dnspython python-whois
 
 ## 📖 Uso
 ```bash
-python nombre_de_tu_script.py -d "google.com, github.com" -R "A,MX" --whois
+python dns_whois_enumeration.py -d "google.com, github.com" -R "A,MX" --whois
 ```
