@@ -59,6 +59,9 @@ python dns_whois_enumeration.py -d "example.com,test.com" -R "A,CNAME" --whois
 python dns_whois_enumeration.py -d "python.org" --whois
 ```
 
+![Ejemplo de salida del programa (Registros)](./img/Registros.png)
+![ejemplo de salida del programa (Whois)](./img/whois.png)
+
 ## Estructura del Código
 
 El script se divide en tres bloques principales para facilitar su mantenimiento:
