@@ -2,6 +2,7 @@ import dns.resolver
 import whois
 import argparse
 import sys
+from banner import banner
 
 
 # Funcion para hacer las consulatas a las bases de datos WHOIS
@@ -68,8 +69,13 @@ def info(domains, records):
 
 # Funcion principal del programa
 def main(register, Whois, domain):
-    # Definimos el nombre de dominio
 
+    try:
+        banner()
+    except Exception:
+        pass
+    
+    # Definimos el nombre de dominio
     if not domain:
         print('No se ha especificado ningun dominio. Usa la opcion "-h" para mas informacion.')     # Si no se especifica algun dominio, salta un error
         print('Ejemplo: %s -d "example.com"' % sys.argv[0])
@@ -95,5 +101,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     main(register=args.register,
-         Whois = args.whois,
-         domain = args.domain)
+        Whois = args.whois,
+        domain = args.domain)
